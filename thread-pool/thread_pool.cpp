@@ -19,6 +19,16 @@ ThreadPool::ThreadPool(size_t count)
 
 ThreadPool::~ThreadPool()
 {
+    wait();
+}
+
+void ThreadPool::enqueue(std::function<void()> task)
+{
+    tasks.push(std::move(task));
+}
+
+void ThreadPool::wait()
+{
     tasks.close();
     for (auto& worker : workers)
     {
@@ -27,9 +37,4 @@ ThreadPool::~ThreadPool()
             worker.join();
         }
     }
-}
-
-void ThreadPool::enqueue(std::function<void()> task)
-{
-    tasks.push(std::move(task));
 }

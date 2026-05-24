@@ -37,7 +37,7 @@ class SafeQueue
 
         cv.wait(lock, [this] { return closed || !q.empty(); });
 
-        if (q.empty() && closed)
+        if (q.empty())
         {
             return false;
         }
