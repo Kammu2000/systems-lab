@@ -30,7 +30,7 @@ public:
 
     cv.wait(lock, [this] { return closed || !q.empty(); });
 
-    if (q.empty())
+    if (q.empty() && closed)
       return false;
 
     task = std::move(q.front());
