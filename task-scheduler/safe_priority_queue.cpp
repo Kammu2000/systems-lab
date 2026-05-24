@@ -21,7 +21,7 @@ bool SafePriorityQueue::pop(Task& task)
     std::unique_lock<std::mutex> lock(queue_mutex);
     cv.wait(lock, [this] { return closed || !pq.empty(); });
 
-    if (pq.empty() && closed)
+    if (pq.empty())
     {
         return false;
     }
