@@ -2,27 +2,34 @@
 #include <cstddef>
 #include <functional>
 
-ThreadPool::ThreadPool(size_t count) {
-  for (int i = 0; i < count; i++) {
-    workers.emplace_back([this]() {
-      std::function<void()> task;
+ThreadPool::ThreadPool(size_t count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        workers.emplace_back([this]() {
+            std::function<void()> task;
 
-      while (tasks.pop(task)) {
-        task();
-      }
-    });
-  }
-}
-
-ThreadPool::~ThreadPool() {
-  tasks.close();
-  for (auto &worker : workers) {
-    if (worker.joinable()) {
-      worker.join();
+            while (tasks.pop(task))
+            {
+                task();
+            }
+        });
     }
-  }
 }
 
-void ThreadPool::enqueue(std::function<void()> task) {
-  tasks.push(std::move(task));
+ThreadPool::~ThreadPool()
+{
+    tasks.close();
+    for (auto& worker : workers)
+    {
+        if (worker.joinable())
+        {
+            worker.join();
+        }
+    }
+}
+
+void ThreadPool::enqueue(std::function<void()> task)
+{
+    tasks.push(std::move(task));
 }
