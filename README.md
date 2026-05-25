@@ -22,7 +22,7 @@ Instead of treating these as black boxes, I want to:
 - improve low-level C++ design thinking
 - prepare for high-performance and infrastructure-heavy engineering work
 
-This is especially aligned with my work and learning around WebAssembly, multithreading, runtime systems, and scalable frontend/backend architecture.
+This is especially aligned with my work and learning around WebAssembly, multithreading, runtime systems, and scalable software architecture.
 
 ---
 
@@ -37,14 +37,12 @@ This is especially aligned with my work and learning around WebAssembly, multith
 ### Event-Driven Systems
 
 - Event Loop
-- Timer Queue
-- Delayed Job Scheduler
 
 ### Performance + Infrastructure
 
 - LRU Cache
-- Memory Pool
-- Logging System
+- Custom Malloc 
+- Smart Pointers
 
 ---
 
