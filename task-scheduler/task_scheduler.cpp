@@ -1,6 +1,7 @@
-#include "safe_priority_queue.hpp"
 #include <cstddef>
 #include <utility>
+
+#include "safe_priority_queue.hpp"
 #include "task_scheduler.hpp"
 
 TaskScheduler::TaskScheduler(const size_t& workers_cnt)

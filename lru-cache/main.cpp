@@ -1,7 +1,8 @@
-#include "lru_cache.hpp"
 #include <cstddef>
 #include <iostream>
 #include <string>
+
+#include "lru_cache.hpp"
 
 constexpr size_t MAX_CACHE_SIZE = 5;
 

@@ -1,6 +1,7 @@
-#include "unique_ptr.hpp"
 #include <iostream>
 #include <utility>
+
+#include "unique_ptr.hpp"
 
 struct Person
 {

@@ -1,8 +1,9 @@
-#include "thread_pool.hpp"
 #include <chrono>
 #include <cstddef>
 #include <iostream>
 #include <thread>
+
+#include "thread_pool.hpp"
 
 constexpr size_t TOTAL_TASKS = 10;
 constexpr size_t POOL_SIZE = 2;

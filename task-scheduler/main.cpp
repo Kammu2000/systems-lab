@@ -1,6 +1,7 @@
-#include "task_scheduler.hpp"
 #include <cstddef>
 #include <iostream>
+
+#include "task_scheduler.hpp"
 
 constexpr size_t TOTAL_TASKS = 10;
 constexpr size_t POOL_SIZE = 5;

@@ -1,9 +1,11 @@
 #pragma once
-#include "safe_queue.hpp"
+
 #include <cstddef>
 #include <functional>
 #include <thread>
 #include <vector>
+
+#include "safe_queue.hpp"
 
 class ThreadPool
 {

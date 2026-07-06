@@ -1,6 +1,7 @@
-#include "thread_pool.hpp"
 #include <cstddef>
 #include <functional>
+
+#include "thread_pool.hpp"
 
 ThreadPool::ThreadPool(size_t count)
 {

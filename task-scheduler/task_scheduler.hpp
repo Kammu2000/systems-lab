@@ -1,7 +1,10 @@
-#include "safe_priority_queue.hpp"
+#pragma once
+
 #include <cstddef>
 #include <thread>
 #include <vector>
+
+#include "safe_priority_queue.hpp"
 
 class TaskScheduler
 {
